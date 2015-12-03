@@ -30,7 +30,7 @@ if (matches) {
 	    console.log("message sent");
 	}
     });*/
-  }
+  });
 } else {
   console.log("Error: Could not create matches");
   process.exit();
