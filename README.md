@@ -6,4 +6,7 @@ To get started, follow the instructions below.
 
 ### Quick Start
 
-To get started simply clone the repo (```git clone https://github.com/BobbumMan/secretSanta.git```) and install dependencies (```npm install```)
+To get started simply:
+ 1. Clone the repo: ```git clone https://github.com/BobbumMan/secretSanta.git```
+ 2. Install dependencies: ```npm install```
+ 3. Profit
