@@ -1,3 +1,4 @@
+"use strict";
 const _ = require('lodash');
 const config = require('./config.js');
 const client = require('twilio')(config.twilio.sid, config.twilio.token);
