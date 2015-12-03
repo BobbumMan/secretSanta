@@ -6,10 +6,14 @@ var people = config.people;
 var attempts = 5
 var matches = false;
 
-for (attempts; attempts >= 0; attempts--)
-  matches = createPairs(people);
-  attempts--;
-} while (!matches && attempts >= 0);
+for (attempts; attempts >= 0; attempts--) {
+  if (!matches) {
+    matches = createPairs(people);
+    attempts--;
+  } else {
+    break;
+  }
+}
 
 if (matches) {
   var resultText = '';
@@ -47,11 +51,12 @@ function createPairs(people) {
       }
 
       do {
-        receiver = _.sample(receivers)
+        var receiverIndex = _.random(0, receivers.length-1);
+	receiver = receivers[receiverIndex];
       } while (receiver.number === sender.number || receiver.name === sender.so);
 
       matches.push([sender, receiver]);
-      receivers.splice(receiverId, 1);
+      receivers.splice(receiverIndex, 1);
       
     }
 
