@@ -50,10 +50,11 @@ function createPairs(people) {
       if (receivers.length === 1 && receivers[0].number === sender.number) {
         return retVal;
       }
-
+      
+      let receiver;
       do {
         const receiverIndex = _.random(0, receivers.length-1);
-	const receiver = receivers[receiverIndex];
+	receiver = receivers[receiverIndex];
       } while (receiver.number === sender.number || receiver.name === sender.so);
 
       matches.push([sender, receiver]);
