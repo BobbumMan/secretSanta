@@ -49,7 +49,7 @@ function createPairs(people) {
       do {
         var receiverId = _.random(0, receivers.length - 1);
         receiver = receivers[receiverId];
-      } while (receiver.number === sender.number || reciever.name == sender.so);
+      } while (receiver.number === sender.number || reciever.name === sender.so);
 
       matches.push([sender, receiver]);
       receivers.splice(receiverId, 1);
