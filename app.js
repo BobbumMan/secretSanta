@@ -50,8 +50,8 @@ function createPairs(people) {
         return retVal;
       }
       
-      let receiver;
-      let receiverIndex;
+      let receiverIndex = _.random(0, receivers.length-1);
+      let receiver = receivers[receiverIndex];
 
       while (receiver.number === sender.number || receiver.name === sender.so) {
       	receiverIndex = _.random(0, receivers.length-1);
