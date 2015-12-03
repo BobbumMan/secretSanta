@@ -1,9 +1,9 @@
 exports.people = [
-    {name: "Shelby", number: "{INSERT PHONE NUMBER}", so:"Devin"},
-    {name: "Steve", number: "{INSERT PHONE NUMBER}", so:"Lauren"},
-    {name: "Lauren", number: "{INSERT PHONE NUMBER}", so:"Steve"},
-    {name: "Devin", number: "{INSERT PHONE NUMBER}", so:"Shelby"},
-    {name: "Josh", number: "{INSERT PHONE NUMBER}", so:null}
+    {name: "Shelby", number: "1", so:"Devin"},
+    {name: "Steve", number: "2", so:"Lauren"},
+    {name: "Lauren", number: "3", so:"Steve"},
+    {name: "Devin", number: "4", so:"Shelby"},
+    {name: "Josh", number: "5", so:null}
 ];
 
 exports.twilio = {

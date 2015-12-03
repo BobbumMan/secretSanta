@@ -1,0 +1,6 @@
+{"dependencies": {
+  "lodash": "3.10.x",
+  "twilio": "2.5.x"
+  }
+}
+   
