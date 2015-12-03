@@ -1,10 +1,10 @@
-var _ = require('lodash');
-var config = require('./config.js');
-var client = require('twilio')(config.twilio.sid, config.twilio.token);
+const _ = require('lodash');
+const config = require('./config.js');
+const client = require('twilio')(config.twilio.sid, config.twilio.token);
 
-var people = config.people;
-var attempts = 5
-var matches = false;
+const people = config.people;
+let attempts = 5
+let matches = false;
 
 for (attempts; attempts >= 0; attempts--) {
   if (!matches) {
@@ -16,7 +16,7 @@ for (attempts; attempts >= 0; attempts--) {
 }
 
 if (matches) {
-  var resultText = '';
+  let resultText = '';
   matches.forEach(match => {
     console.log(`${match[0].name} -> ${match[1].name}`);
     /*client.messages.create({
@@ -37,21 +37,21 @@ if (matches) {
 }
 
 function createPairs(people) {
-  var retVal = false;
+  let retVal = false;
 
   if (people.length > 0) {
-    var receivers = _.clone(people);
-    var matches = [];
+    let receivers = _.clone(people);
+    let matches = [];
 
     for (var i in people) {
-      var sender = people[i];
+      const sender = people[i];
 
       if (receivers.length === 1 && receivers[0].number === sender.number) {
         return retVal;
       }
 
       do {
-        var receiverIndex = _.random(0, receivers.length-1);
+        const receiverIndex = _.random(0, receivers.length-1);
 	receiver = receivers[receiverIndex];
       } while (receiver.number === sender.number || receiver.name === sender.so);
 
