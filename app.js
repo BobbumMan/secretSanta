@@ -6,7 +6,7 @@ var people = config.people;
 var attempts = 5
 var matches = false;
 
-do {
+for (attempts; attempts >= 0)
   matches = createPairs(people);
   attempts--;
 } while (!matches && attempts >= 0);
@@ -36,8 +36,8 @@ function createPairs(people) {
   var retVal = false;
 
   if (people.length > 0) {
-    var receivers = _.clone(people),
-      matches = [];
+    var receivers = _.clone(people);
+    var matches = [];
 
     for (var i in people) {
       var sender = people[i];
@@ -47,8 +47,7 @@ function createPairs(people) {
       }
 
       do {
-        var receiverId = _.random(0, receivers.length - 1);
-        receiver = receivers[receiverId];
+        receiver = _.sample(receivers)
       } while (receiver.number === sender.number || receiver.name === sender.so);
 
       matches.push([sender, receiver]);
