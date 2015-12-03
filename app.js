@@ -6,7 +6,7 @@ var people = config.people;
 var attempts = 5
 var matches = false;
 
-for (attempts; attempts >= 0)
+for (attempts; attempts >= 0; attempts--)
   matches = createPairs(people);
   attempts--;
 } while (!matches && attempts >= 0);
