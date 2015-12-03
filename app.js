@@ -52,8 +52,9 @@ function createPairs(people) {
       }
       
       let receiver;
+      let receiverIndex;
       do {
-        const receiverIndex = _.random(0, receivers.length-1);
+        receiverIndex = _.random(0, receivers.length-1);
 	receiver = receivers[receiverIndex];
       } while (receiver.number === sender.number || receiver.name === sender.so);
 
