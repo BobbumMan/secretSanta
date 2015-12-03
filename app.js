@@ -17,12 +17,12 @@ for (attempts; attempts >= 0; attempts--) {
 
 if (matches) {
   var resultText = '';
-  for (var i in matches) {
-    console.log(matches[i][0].name + ' -> ' + matches[i][1].name);
+  matches.forEach((match) => {
+    console.log(match[0].name + ' -> ' + match[1].name);
     /*client.messages.create({
-	body: "Merry Christmas! You're being Santa for "+matches[i][1].name,
+	body: "Merry Christmas! You're being Santa for "+match[1].name,
 	from: config.twilio.number,
-	to: matches[i][0].number,
+	to: match[0].number,
     }, function(err, message) {
 	if (err) {
 	    console.log(err);
