@@ -14,8 +14,8 @@ do {
 if (matches) {
   var resultText = '';
   for (var i in matches) {
-    resultText += matches[i][0].name + ' -> ' + matches[i][1].name + '\n';
-    client.messages.create({
+    console.log(matches[i][0].name + ' -> ' + matches[i][1].name);
+    /*client.messages.create({
 	body: "Merry Christmas! You're being Santa for "+matches[i][1].name,
 	from: config.twilio.number,
 	to: matches[i][0].number,
@@ -25,7 +25,7 @@ if (matches) {
         } else {
 	    console.log("message sent");
 	}
-    });
+    });*/
   }
 } else {
   console.log("Error: Could not create matches");
