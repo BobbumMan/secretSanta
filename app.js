@@ -17,7 +17,7 @@ for (attempts; attempts >= 0; attempts--) {
 
 if (matches) {
   var resultText = '';
-  matches.forEach((match) => {
+  matches.forEach(match => {
     console.log(match[0].name + ' -> ' + match[1].name);
     /*client.messages.create({
 	body: "Merry Christmas! You're being Santa for "+match[1].name,
