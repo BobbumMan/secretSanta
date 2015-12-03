@@ -18,9 +18,9 @@ for (attempts; attempts >= 0; attempts--) {
 if (matches) {
   var resultText = '';
   matches.forEach(match => {
-    console.log('${match[0].name} -> ${match[1].name}');
+    console.log(`${match[0].name} -> ${match[1].name}`);
     /*client.messages.create({
-	body: 'Merry Christmas! You're being Santa for ${match[1].name}',
+	body: `Merry Christmas! You're being Santa for ${match[1].name}`,
 	from: config.twilio.number,
 	to: match[0].number,
     }, function(err, message) {
@@ -32,7 +32,7 @@ if (matches) {
     });*/
   });
 } else {
-  console.log("Error: Could not create matches");
+  console.log('Error: Could not create matches');
   process.exit();
 }
 
