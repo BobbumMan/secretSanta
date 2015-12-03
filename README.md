@@ -12,3 +12,5 @@ To get started simply:
  1. Clone the repo: ```git clone https://github.com/BobbumMan/secretSanta.git```
  2. Install dependencies: ```npm install```
  3. Edit the ```config.js``` file to include your info (friend information, and twilio account information)
+ 4. Run the application: ```node app.js```
+ 5. Profit
