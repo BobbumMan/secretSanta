@@ -44,24 +44,24 @@ function createPairs(people) {
     let receivers = _.clone(people);
     let matches = [];
 
-    for (var i in people) {
-      const sender = people[i];
-
+    people.forEach(sender => {
+    	
       if (receivers.length === 1 && receivers[0].number === sender.number) {
         return retVal;
       }
       
       let receiver;
       let receiverIndex;
-      do {
-        receiverIndex = _.random(0, receivers.length-1);
+
+      while (receiver.number === sender.number || receiver.name === sender.so) {
+      	receiverIndex = _.random(0, receivers.length-1);
 	receiver = receivers[receiverIndex];
-      } while (receiver.number === sender.number || receiver.name === sender.so);
+      };
 
       matches.push([sender, receiver]);
       receivers.splice(receiverIndex, 1);
       
-    }
+    });
 
     if (matches.length > 0) {
       retVal = matches;
